@@ -47,3 +47,13 @@ resource "kubernetes_namespace" "monitoring" {
     }
   }
 }
+
+resource "kubernetes_namespace" "backstage" {
+  metadata {
+    name = "backstage"
+
+    labels = {
+      managed-by = "Terraform"
+    }
+  }
+}
